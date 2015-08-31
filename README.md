@@ -1,13 +1,10 @@
-<h1>StaticPages_home</h1>
-
-<h3>Fork this project as a starter template for basic home page, partials, and bootstrap.</h3>
-
-<p>This template includes a StaticPages controller with a home.html.erb view.</p>
-
-<p>The <a href="https://rubygems.org/gems/bootstrap-sass/versions/3.3.5.1 _blank">bootstrap-sass</a> gem.</p>
-
-<p>Cleaned up gemfile.</p>
-
-<p>Routes set the root to the home.html.erb.</p>
-
-<p>Partials for _shiv.html.erb, _navbar.html.erb, and _footer.html.erb. (<a href="https://en.wikipedia.org/wiki/HTML5_Shiv _blank"> shiv wiki article</a>)</p>
+<h1>Devise Base</h1>
+</br>
+  <pre><h4>add <a href="https://rubygems.org/gems/devise/versions/3.5.1" target="_blank">devise gem</a></h4></pre>
+  <pre><h4>$ bundle install</h4></pre>
+  <pre><h4>$ rails generate devise:install</h4></pre>
+  <pre><h4>&nbsp;<a href="https://gist.github.com/pacafs/f77f73a8caa197fd8241#file-default_url_options-rb" target="_blank">add url options ????</a></h4></pre>
+  <pre><h4>$ rails generate devise:views</h4></pre>
+  <pre><h4>$ rails generate devise User</h4></pre>
+  <pre><h4>$ rake db:migrate</h4></pre>
+  <pre><h4>update _header.html.erb partial to include if than staments</h4></pre>
