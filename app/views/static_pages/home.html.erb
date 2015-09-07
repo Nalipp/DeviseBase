@@ -1,18 +1,24 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>Devise Base</h1>
-    </br>
-      <pre><h4>&nbsp;add <a href="https://rubygems.org/gems/devise/versions/3.5.1" target="_blank">devise gem</a></h4></pre>
-      <pre><h4>$ bundle install</h4></pre>
-      <pre><h4>$ rails generate devise:install</h4></pre>
-      <pre><h4>&nbsp;<a href="https://gist.github.com/pacafs/f77f73a8caa197fd8241#file-default_url_options-rb" target="_blank">add url options ????</a></h4></pre>
-      <pre><h4>$ rails generate devise:views</h4></pre>
-      <pre><h4>$ rails generate devise User</h4></pre>
-      <pre><h4>$ rake db:migrate</h4></pre>
-      <pre><h4>update _header.html.erb partial to include if than staments</h4></pre>
-      <div class="text-center">
+    <h1 class="text-center jumbotron-title">book a study group</h1>
+    <h2 class="text-center">online study session</h2>
+  </div>
 
-        <%= link_to "sign up", root_path, class: "btn btn-primary btn-lg" %>
-      </div>
-    </div>
+  <div class="container text-center">
+    <% if user_signed_in? %>
+      <a><%= link_to("join a group", root_path, class: "btn btn-primary outline") %></a>
+    <% else %>
+      <a><%= link_to("Sign up", new_user_registration_path, class: "btn btn-primary outline") %></a>
+      <a><%= link_to("Log in", new_user_session_path, class: "btn btn-primary outline") %></a>
+    <% end %>
+  </div>
+
+  <div class="container text-center footer-links">
+    <h5>
+      <a><%= link_to("faq", faq_path, class: "unstyled") %></a> ·
+      <a><%= link_to("contact", contact_path, class: "unstyled") %></a> ·
+      <a><%= link_to("offline study", offline_study_path, class: "unstyled") %></a>
+    </h5>
+  </div>
+
 </div>

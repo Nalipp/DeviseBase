@@ -1,21 +1,17 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-      <a><%= link_to "DeviseBase", root_path, class: "navbar-brand" %></a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <a><%= link_to("Jongno Language Exchange", root_path, class: "navbar-brand") %></a>
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-        <li><%= link_to "settings", edit_user_registration_path %></li>
-        <li><%= link_to "log out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-        <li><%= link_to "log in", new_user_session_path %></li>
-        <li><%= link_to "sign up", new_user_registration_path %></li>
-        <% end %>
+        <li>
+          <p class="navbar-btn">
+            <% if user_signed_in? %>
+              <a><%= link_to("edit schedule", dashboard_path, class: "btn btn-primary outline small") %></a>
+              <a><%= link_to("log out", destroy_user_session_path, method: :delete, class: "btn btn-primary outline small") %></a>
+            <% else %>
+              <a><%= link_to("log in", new_user_session_path, class: "btn btn-primary outline small") %></a>
+            <% end %>
+          </p>
+        </li>
       </ul>
-    </div>
   </div>
 </nav>

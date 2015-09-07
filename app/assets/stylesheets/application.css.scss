@@ -1,9 +1,172 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
-.navbar {
-  margin-bottom: 0;
+$blue: #2E80E1;
+$dark_blue: #2973ca;
+$white-gray: #EEEEEE;
+$light_gray: #d6d6d6;
+$gray-section: #D6D6D6;
+$dark_gray:  #828282;
+
+body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0 ;
 }
+
+/* navbar */
+
+.navbar-default {
+  background-color: $blue;
+  border: 0px;
+  padding-top: 15px;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: $white-gray;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: $white_gray;
+}
+
+/* containers */
+
+.jumbotron {
+  background-color: $blue;
+    color: $white-gray;
+    padding: 100px 40px 80px 40px;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 0%!important;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 0;
+    h1 {
+       font-size: 100px;
+       font-weight: bold;
+       padding: 0px 0 10px 0;
+     }
+    h2 {
+      font-size: 60px;
+      padding: 30px 0 80px 0;
+      letter-spacing: 5px;
+    }
+  }
+
+  .container-title {
+  font-size: 60px;
+  padding: 100px 0 120px 0;
+  letter-spacing: 5px;
+}
+
+.container-form {
+    padding: 40px 0 60px 0;
+}
+
+/* footer */
+
+.footer-links{
+  padding: 100px 40px 0px 40px;
+}
+
+/* fonts */
+
+h1 h2 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.unstyled {
+  color: $white_gray;
+}
+
+.unstyled:hover {
+  color: $light_gray;
+}
+
+.unstyled_link {
+  color: white;
+}
+a.unstyled_link,
+a.unstyled_link:hover { color: white; }
+
+
+  /* buttons */
+
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+
+.btn-primary {
+  background: $white_gray;
+  color: $white_gray;
+}
+
+.btn-primary-blue {
+  background: $blue;
+  color: $blue;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: $light_gray;
+}
+
+.btn-primary-blue:hover, .btn-primary-blue:focus, .btn-primary-blue:active, .btn-primary-blue.active, .open > .dropdown-toggle.btn-primary-blue {
+  background: $blue;
+}
+
+.btn.outline {
+  background: none;
+  padding: 12px 22px;
+}
+
+.btn-primary.outline {
+  border: 2px solid $white_gray;
+  color: $white_gray;
+}
+
+.btn-primary-blue.outline {
+  border: 2px solid $blue;
+  color: $blue;
+}
+
+.btn-primary.small {
+  border: 2px solid $white_gray;
+  color: $white-gray;
+  background: none;
+  padding: 6px 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: $light_gray;
+  border-color: $light_gray;
+}
+
+.btn-primary-blue.outline:hover, .btn-primary-blue.outline:focus, .btn-primary-blue.outline:active, .btn-primary-blue.outline.active, .open > .dropdown-toggle.btn-primary-blue {
+  color: $dark_blue;
+  border-color: $dark_blue;
+}
+
+
+//* forms *//
 
 .form-signin {
   max-width: 330px;
